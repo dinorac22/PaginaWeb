@@ -15,99 +15,43 @@ body {
     margin: auto;
     overflow: hidden;
 }
-
-.titulo {
-    color: #642a73;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-/*Header*/
 header {
     width: 100%;
-    height: 700px;
-    background: #bc4e9c;
+    height: 800px;
+    background: #428bc3a2;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);
+    background: -webkit-linear-gradient(to right, #428bc3a2, #428bc3a2);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.245), hsla(317, 45%, 52%, 0.245)), url(../img/portada1.jpg);
+    background: linear-gradient(to right, hsla(206, 52%, 51%, 0.171), hsla(206, 52%, 51%, 0.177)), url(../img/portada.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url(../img/portada.jpg);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    text-align: right;
-    padding: 30px 50px 0 0;
-    /*max-width: 992px;
-    margin: 0 auto;*/
+header .logo{    
+    width: 20%;
+    height: auto;
+    padding-left: 20px;
 }
 
-.nav-link{
-    color: white;
-    text-decoration: none;
-}
-.nav-toggle{
-    color: white;
-    background: none;
-    border: none;
-    font-size: 30px;
-    padding: 0 20px;
-    line-height: 30px;
-    display: none;
-    cursor: pointer;
-}
-.nav-toggle:focus:not(:focus-visible){
-    outline: none;
+
+ 
+.nav-item{
+    font-size:large !important;
+   
 }
 
-/*nav>a {
-    color: white;
-    font-weight: 300;
-    text-decoration: none;
-    margin-right: 10px;
-}*/
-
-.logo{
-    padding: 10px 60px;
-    width: 30%;
-    height: 30%;
-}
-
-.nav-menu{
-    display: flex;
-    margin-right: 40px;
-    list-style: none;
-}
-
-.nav-menu-item{
-    font-size: 18px;
-    margin: 0 10px;
-    line-height: 50px;
-    text-transform: uppercase;
-    width: max-content;
-}
-
-.nav-menu-link{
-    padding: 4px 6px;
-    border-radius: 3px;
-}
-.nav-menu-link:hover,
-.nav-menu-link_active{
-    color: white;
-    background-color:hsla(330, 100%, 47%, 0.504);
+.nav-link:hover {
+    color: #05762d !important;
     transition: 0.5s;
 }
-
-/*nav>a:hover {
-    text-decoration: underline;
-
-}*/
+#menu li>a {
+    font-size: 18px;
+    color: #230A4C;
+}
 
 header .textos-header {
     display: flex;
@@ -121,7 +65,7 @@ header .textos-header {
 
 .textos-header h1 {
     font-size: 45px;
-    color: white;
+    color: white !important;
 }
 
 .textos-header h2 {
@@ -130,7 +74,6 @@ header .textos-header {
     color: white;
 
 }
-
 .wave {
     position: absolute;
     bottom: 0;
@@ -212,7 +155,7 @@ header .textos-header {
     height: 100%;
     top: 0;
     transform: scale(0);
-    background: hsla(273,91%,27%,0.7);
+    background: hsla(263, 77%, 17%, 0.61);
     transition: transform .5s;
     display: flex;
     justify-content: center;
@@ -240,7 +183,7 @@ header .textos-header {
 }
 
 .cards .card{
-    background: #4d0686;
+    background: #230A4C;
     display: flex;
     width: 46%;
     height: 200px;
@@ -261,7 +204,7 @@ header .textos-header {
 
 .cards .card .contenido-texto-card{
     width: 60%;
-    color: white;
+    color: #d1d0d0;
 }
 .cards .card .contenido-texto-card p{
     font-weight: 300;
@@ -274,28 +217,6 @@ header .textos-header {
     
 }
 
-.servicio-cont{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.servicio-ind{
-    width: 28%;
-    text-align: center;
-}
-.servicio-ind img{
-    width: 90%;
-}
-
-.servicio-ind h3{
-    margin-top: 10px 0;
-}
-
-.servicio-ind p{
-    font-weight: 300;
-    text-align: justify;
-}
 .horizontal-padding{
     padding-left: 25px;
     padding-right: 25px;
@@ -308,7 +229,7 @@ header .textos-header {
 /*footer*/
 
 footer{
-    background: #414141;
+    background: #070111;
     padding: 30px 0 30px 0;
     margin: auto;
     overflow: hidden;
@@ -341,58 +262,70 @@ footer{
     text-align: center;
     font-size: 24px;
     margin: 0 0 0 0;
-    color: #9e9797;
+    color: #d1d0d0;
     
 }
 
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 992px) {
  header{
     background-position: center;   
- }   
- .logo{
-    width: 60%;
-    padding: 10px 20px;
- }
- .nav-menu{
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-    background-color: #4f4e4e;
-    position: fixed;
-    left: 0;
-    top: 60px;
-    width: 100%;
-    padding: 20px 0;
-    height: 300px;
-    overflow-y: auto;
-    margin-top: 40px;
-    left: 100%;
-    transition: left 0.3s;
- }
- .nav-menu-item{
-    font-size: 16px;
+    height: 980px;
+ } 
+
+ header .navbar{
+    background: white !important;
+    width: 100% !important;
 }
-.nav-menu-link{
+
+header .logo{    
+    width: 25%;
+    height: auto;
     padding: 0;
-    border-radius:0;
+} 
+
+ 
+.nav-item{
+    font-size:large !important;
+   
 }
-.nav-menu-link:hover,
-.nav-menu-link_active{
-    transition: none;
-    background: none;
-    color: #f80759;
+
+.nav-link:hover {
+    color: #05762d !important;
+    transition: 0.5s;
 }
+#menu li>a {
+    font-size: 18px;
+    color: #230A4C;
+}
+
+header .textos-header {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: right;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1 {
+    font-size: 45px;
+    color: white !important;
+}
+
+.textos-header h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+
+}
+ 
 .wave {
     padding: 0;
     border: none;
 }
 
-.no-scroll {
-    /* Debe tener altura específica para que funcione */
-    max-height: 100vh;
-    overflow: hidden;
-}
  .contenedor-sobre-nosotros{
     flex-direction: column;
     justify-content: center;
@@ -465,12 +398,43 @@ footer{
     padding-bottom: 70px;
 }
 }
+
+@media screen and (max-width: 768px) {
+    header{
+       background-position: center;   
+       
+    } 
+   
+    header .navbar{
+       background: white !important;
+       width: 100% !important;
+   }
+   
+   header .logo{    
+       width: 25%;
+       height: auto;
+       padding: 0;
+   }
+ }
+
+
 @media screen and (max-width: 500px) {
-    .logo{
-        width: 70%;
-        padding: 10px 20px;
-        justify-content: center;
-     }
+    header{
+        background-position: center;   
+        
+     } 
+    
+     header .navbar{
+        background: white !important;
+        width: 100% !important;
+    }
+    
+    header .logo{    
+        width: 35%;
+        height: auto;
+        padding: 0;
+    } 
+    
      .imagen-port{
         width: 90%;
      }
